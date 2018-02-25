@@ -4,7 +4,7 @@ import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
-public class KafkaProducer {
+public class KafkaProducerDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,7 +22,7 @@ public class KafkaProducer {
 				new org.apache.kafka.clients.producer.KafkaProducer<String, String>(properties);
 		
 		ProducerRecord<String, String> producerRecord = 
-				new ProducerRecord<String, String>("first_topic", "3", "takla bombil");
+				new ProducerRecord<String, String>("second_topic", "3", "takla bombil");
 		
 		producer.send(producerRecord);
 		producer.close();
